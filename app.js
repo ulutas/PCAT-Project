@@ -7,10 +7,10 @@ const photoController = require('./controllers/photoControllers');
 const pageController = require('./controllers/pageController')
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 //connect db
-mongoose.connect('mongodb://127.0.0.1:27017/pcat-db', {
+mongoose.connect('mongodb+srv://ulutasu:WJu265SEpzNn3IB4@cluster0.fawm0tt.mongodb.net/pcat-db?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
